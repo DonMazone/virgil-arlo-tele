@@ -4,27 +4,41 @@
 body {
   background-color: #97790a;
 }
-header {
-  display: flex;
-  padding: 14px 55px;
+/* header {
+  width: 100%;
+  max-width: 1799px;
+  padding: 15px 55px;
   border-bottom: 1px solid #dddcd4;
+} */
+
+header .container {
+  align-items: center;
+  display: flex;
+  width: 100%;
+  padding: 15px 55px 12px;
+  border-bottom: 1px solid #dddcd4;
+  box-sizing: border-box;
 }
-header a {
+header .container a {
   text-decoration: none;
   color: #3d4246;
+  display: table-cell;
 }
-header .container {
-  display: flex;
-  align-items: center;
-  width: 100%;
+header .container .logo img {
+  float: left;
 }
-header .container .nav-menu {
-  display: flex;
+header .container nav {
   margin: 0 auto;
   font-family: Work Sans;
-  padding: 0 30px 0 0;
+  padding: 0 40px 0 0;
 }
-header .container .nav-menu a {
+
+header .container nav li {
+  list-style-type: none;
+  float: left;
+}
+
+header .container nav a {
   color: #3d4246;
   text-transform: capitalize;
   padding: 12px;
@@ -33,6 +47,7 @@ header .container .icons {
   padding: 0 0 0 95px;
   margin-right: -20px;
   position: relative;
+  float: right;
 }
 
 header .container .icons .fas {
@@ -42,20 +57,23 @@ header .container .icons .fas {
 .model {
   text-align: center;
   box-sizing: border-box;
-  width: 900px;
+  width: 100%;
   margin: 0 auto;
+  padding: 0 110px;
 }
 .model h1 {
   color: #3d4246;
   font-size: 2.2rem;
   text-transform: capitalize;
-  padding: 58px 0;
+  padding: 54px 0;
+
   font-family: Work Sans;
   font-weight: 600;
+  line-height: 1.2;
 }
 .model p {
   color: #b9ccda;
-  width: 900px;
+  max-width: 905px;
   margin: 0 auto;
   margin-bottom: 20px;
   font-family: Work Sans;
@@ -64,6 +82,32 @@ header .container .icons .fas {
   line-height: 1.5;
 }
 .model iframe {
-  width: 900px;
-  height: 500px;
+  width: 100%;
+  max-width: 905px;
+  height: 505px;
+}
+
+/* Tablets */
+@media only screen and (max-width: 960px) {
+  /* header {
+    width: 100%;
+  }
+  header .container .icons {
+    padding: 0;
+    margin-right: 0;
+  }
+  .model p {
+    width: 850px;
+    margin-bottom: 25px;
+  }
+  .model iframe {
+    width: 850px;
+    height: 500px;
+  } */
+}
+/* Phones */
+@media only screen and (max-width: 767px) {
+  /* header {
+    width: 100%;
+  } */
 }
